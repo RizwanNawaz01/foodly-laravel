@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .app-container {
+        @apply mx-auto max-w-[1400px] px-4;
+    }
+}
+
+
+:root {
+    --color-primary: #1b5e20;
+}
+
+/* Define your design tokens */
+@theme {
+    --color-primary: #E50914;
+    /* other tokens */
+}
+
+/* Then you can create the utility */
+@layer utilities {
+    .text-primary {
+        color: var(--color-primary);
+    }
+
+    .bg-primary {
+        background-color: var(--color-primary);
+    }
+}
